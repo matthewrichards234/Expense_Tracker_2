@@ -9,9 +9,17 @@ CREATE TABLE User (
 );
 
 CREATE TABLE Category (
-    
+    category_id INT PRIMARY KEY AUTO_INCREMENT,
+    category_name VARCHAR(50) UNIQUE NOT NULL
 );
 
 CREATE TABLE Transaction (
-
+    transaction_id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT NOT NULL,
+    date_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    category_id INT NOT NULL,
+    total_amount DECIMAL(10, 2) NOT NULL,
+    payment_method ENUM('Cash', 'Credit', 'Debit', 'Other') NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES User(user_id),
+    FOREIGN KEY (category_id) REFERENCES Category(category_id)
 );
