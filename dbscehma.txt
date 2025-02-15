@@ -1,0 +1,21 @@
+User:
+- User ID (PK)
+- First Name
+- Last Name
+- Date of Birth
+- Email (Unique)
+- Phone Number (Unique)
+- Password (Hashed)
+
+Category:
+- Category ID (PK)
+- Category Name (Unique)
+
+Transaction:
+- Transaction ID (PK)
+- User (FK)
+- Date & Time
+- Category (FK)
+- Total Amount
+- Payment Method [Cash, Credit, Debit, Other]
+
