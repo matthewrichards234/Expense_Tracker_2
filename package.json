@@ -2,7 +2,10 @@
   "name": "fintrack-cli",
   "version": "1.0.0",
   "description": "my finance tracker cli",
-  "main": "src/index.js",
+  "main": "bin/index.js",
+  "bin": {
+      "cli": "./bin/index.js" 
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
