@@ -1,0 +1,23 @@
+{
+  "name": "fintrack-cli",
+  "version": "1.0.0",
+  "description": "my finance tracker cli",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthewrichards234/Expense_Tracker_2.git"
+  },
+  "keywords": [
+    "expense-tracker",
+    "finance",
+    "budget",
+    "cli",
+    "tracker",
+    "personal-finance"
+  ],
+  "author": "matthewrichards234",
+  "license": "ISC"
+}
