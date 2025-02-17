@@ -1,0 +1,39 @@
+finance-tracker/
+│── backend/
+│   │── models/                # Database models (SQLAlchemy/Django ORM)
+│   │   ├── user.py
+│   │   ├── transaction.py
+│   │   ├── category.py
+│   │── routes/                # API endpoints
+│   │   ├── user_routes.py
+│   │   ├── transaction_routes.py
+│   │   ├── category_routes.py
+│   │── services/              # Business logic & helpers
+│   │   ├── auth_service.py
+│   │   ├── transaction_service.py
+│   │── tests/                 # Unit & integration tests
+│   │   ├── test_users.py
+│   │   ├── test_transactions.py
+│   │── config.py              # Environment variables & settings
+│   │── database.py            # DB connection setup
+│   │── main.py                # Entry point (runs Flask/FastAPI/Django)
+│
+│── frontend/ (Optional)
+│   │── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── App.js
+│   │── public/
+│   │── index.html
+│
+│── cli/ (If making a CLI tool)
+│   │── cli.py                  # CLI entry point
+│   │── commands/
+│   │   ├── add_transaction.py
+│   │   ├── list_transactions.py
+│
+│── migrations/                 # DB migrations (Alembic/Django Migrations)
+│── .env                        # Environment variables (API keys, DB URL)
+│── requirements.txt            # Python dependencies
+│── README.md                   # Project documentation
+│── .gitignore                   # Ignore unnecessary files
