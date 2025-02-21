@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, url_for
 from markupsafe import escape
 
 app = Flask(__name__)
@@ -24,7 +24,12 @@ def show_subpath(subpath):
     # show the subpath after /path/
     return f'Subpath {escape(subpath)}'
 
-
+# URL BUILDING
+with app.test_request_context():
+    print(url_for('index'))
+    print(url_for('login'))
+    print(url_for('login', next='/'))
+    print(url_for('profile', username='John Doe'))
 
 """
 The canonical URL for the projects endpoint has a trailing slash. 
