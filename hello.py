@@ -1,4 +1,4 @@
-from flask import Flask, url_for
+from flask import Flask, url_for, request
 from markupsafe import escape
 
 app = Flask(__name__)
@@ -50,3 +50,14 @@ def projects():
 @app.route('/about') # No trailing slash
 def about():
     return 'The about page'
+
+
+# HTTP METHODS
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        return do_the_login() # Logins in user
+    else:
+        return show_the_login_form() # Prompts login form
+# Both of the functions above need to be written im just following the documentation
+
