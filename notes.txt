@@ -1,0 +1,9 @@
+To-Do:
+Write basic HTML for the following:
+- Login In or Sign Up screen
+(inside of this):
+    - Login In for returning users
+    - Sign up for first time
+
+No CSS required 
+Maybe some light JS
