@@ -1,9 +1,28 @@
-.form {
-    height: 200px;
-    position: absolute;
-    border: 3px solid green;
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    background-color: #f0f0f0; /* Light background for better visibility */
+}
+
+.form {
+    margin: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff; /* Add color to buttons */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
 }
