@@ -52,12 +52,28 @@ def about():
     return 'The about page'
 
 
+
 # HTTP METHODS
+# Get: Non-secure (in address bar)
+# Post: Secure (passwords)
+
+
+# To - Do
+# 1. Define 'valid login'
+# 2. Define 'do the login'
+# 3 Define 'show_the_login_form'
+
+# Notes
+# Request Documentation: https://flask.palletsprojects.com/en/stable/api/#flask.Request
+# Recommend accessing URL parameters with get or by catching the KeyError because users might change the URL and presenting them a 400 bad request page in that case is not user friendly.
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     render_template('logInOrSignUp.html') # Flask will look for templates in the templates folder!
+    error = None
     if request.method == 'POST':
-        return do_the_login() # Logins in user
+        if valid_login(request.form['username'],
+                       request.form['password']):
+            return do_the_login() # Logins in user
     else:
         return show_the_login_form() # Prompts login form
 # Both of the functions above need to be written im just following the documentation
