@@ -1,4 +1,4 @@
-from flask import Flask, url_for, request
+from flask import Flask, url_for, request, render_template
 from markupsafe import escape
 
 app = Flask(__name__)
@@ -55,9 +55,18 @@ def about():
 # HTTP METHODS
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+    render_template('logInOrSignUp.html') # Flask will look for templates in the templates folder!
     if request.method == 'POST':
         return do_the_login() # Logins in user
     else:
         return show_the_login_form() # Prompts login form
 # Both of the functions above need to be written im just following the documentation
+
+@app.route('/userLoginVerification', methods=['GET', 'POST'])
+def userLoginVerification(username, password):
+    pass
+
+@app.route('/signUp')
+def signUp():
+    pass
 
